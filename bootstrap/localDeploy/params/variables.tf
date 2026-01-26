@@ -1,0 +1,90 @@
+//Global Variables
+variable "tags" {
+  description = "Tags to apply to resources."
+  type        = map(string)
+  default = {
+    Service     = "TBC"
+    Environment = "TBC"
+    Creator     = "TBC"
+    ReviewDate  = "YY/MM"
+  }
+}
+
+variable "location" {
+  description = "Azure region for resources."
+  type        = string
+}
+
+variable "locationShort" {
+  description = "Short form of the Azure region for resources."
+  type        = string
+
+}
+
+variable "environment" {
+  description = "The environment for which the resources are being created (e.g., dev, tst, uat, prd)."
+  type        = string
+}
+
+variable "app_short" {
+  description = "Short form of the application for resources.  Might be an application code or abbreviation."
+  type        = string
+
+}
+
+//State Variables
+variable "subscriptionId_State" {
+  description = "Subscription ID for the Terraform State resources."
+  type        = string
+}
+
+variable "tags_state" {
+  description = "Additional or override tags for state resources."
+  type        = map(string)
+  default     = {}
+}
+
+variable "rgName_state" {
+  description = "Name of the resource group."
+  type        = string
+  default     = "rg-tfstate"
+}
+
+variable "saName_state" {
+  description = "Name of the storage account."
+  type        = string
+  default     = "sttfstate"
+}
+
+variable "containers_state" {
+  description = "Containers to create in the storage account."
+  type        = map(object({
+    name          = string
+    public_access = optional(string, null)
+  }))
+  default     = {}
+}
+
+//Identity Variables
+variable "subscriptionId_umi" {
+  description = "Subscription ID for the Terraform State resources."
+  type        = string
+}
+
+variable "tags_umi" {
+  description = "Additional or override tags for state resources."
+  type        = map(string)
+  default     = {}
+}
+
+variable "rgName_umi" {
+  description = "Name of the resource group."
+  type        = string
+  default     = "rg-umi"
+}
+
+variable "umiName_tf" {
+  description = "Name of the user managed identity."
+  type        = string
+  default     = "umi-tf"
+}

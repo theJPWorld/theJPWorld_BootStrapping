@@ -1,4 +1,4 @@
-//Global Variables
+﻿//Global Variables
 variable "tags" {
   description = "Tags to apply to resources."
   type        = map(string)
@@ -87,4 +87,51 @@ variable "umiName_tf" {
   description = "Name of the user managed identity."
   type        = string
   default     = "umi-tf"
+}
+
+//SC Credentials Variables
+variable "subscriptionId_Application" {
+  description = "The Azure Subscription ID for deployment."
+  type        = string
+}
+
+variable "subscriptionName_Application" {
+  description = "The Azure Subscription Name for deployment."
+  type        = string
+}
+
+variable "adoPAT" {
+  description = "The Azure DevOps personal access token."
+  type        = string
+  default     = null
+}
+
+variable "serviceConnectionName_Build" {
+  description = "The name of the Azure DevOps service connection."
+  type        = string
+  default     = "sc_build"
+}
+
+variable "serviceConnectionName_Deploy" {
+  description = "The name of the Azure DevOps service connection."
+  type        = string
+  default     = "sc_deploy"
+}
+
+variable "scDescription" {
+  description = "Description for the service connection."
+  type        = string
+  default     = "Service connection for either build or deploy using OIDC federated credentials."
+}
+
+variable "adoOrgUrl" {
+  description = "The Azure DevOps organization URL."
+  type        = string
+  default     = "https://dev.azure.com/<Fill Me In>/"
+}
+
+variable "adoProjectId" {
+  description = "The Azure DevOps project ID."
+  type        = string
+  default     = "<Fill Me In>"
 }

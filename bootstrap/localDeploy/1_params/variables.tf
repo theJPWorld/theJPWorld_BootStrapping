@@ -100,21 +100,10 @@ variable "subscriptionName_Application" {
   type        = string
 }
 
-variable "adoOrgUrl" {
-  description = "The Azure DevOps organization URL."
-  type        = string
-  default     = "https://dev.azure.com/theJPWorld/"
-}
-
-variable "adoProjectId" {
-  description = "The Azure DevOps project ID."
-  type        = string
-  default     = "053ffcce-a848-4a4f-970b-5f49abdc5de8"
-}
-
 variable "adoPAT" {
   description = "The Azure DevOps personal access token."
   type        = string
+  default     = null
 }
 
 variable "serviceConnectionName_Build" {
@@ -133,4 +122,16 @@ variable "scDescription" {
   description = "Description for the service connection."
   type        = string
   default     = "Service connection for either build or deploy using OIDC federated credentials."
+}
+
+variable "adoOrgUrl" {
+  description = "The Azure DevOps organization URL."
+  type        = string
+  default     = "https://dev.azure.com/<Fill Me In>/"
+}
+
+variable "adoProjectId" {
+  description = "The Azure DevOps project ID."
+  type        = string
+  default     = "<Fill Me In>"
 }

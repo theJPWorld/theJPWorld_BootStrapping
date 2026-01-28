@@ -30,6 +30,6 @@ Each directory is structured to support modular, environment-specific deployment
 
 # How To Use this BootStrapper
 
-To follow the default naming structure used above please read [this](ZDocumention/variables-reference.md) to understand the Variables used in this BootStrapper.  You should then be able to update the tfvars (found inside "bootstrap/localDeploy/params" folder) for the environments you require.  You can add additional tfvars by creating a new "env.tfvars" based off of an already existing one.  
+To follow the default naming structure used above please read [this](ZDocumention/variables-reference.md) to understand the Variables used in this BootStrapper.  You should then be able to update the tfvars (found inside "bootstrap/localDeploy/1_params" folder) for the environments you require.  You can add additional tfvars by creating a new "env.tfvars" based off of an already existing one.  
   
-You can then update the [Boot Strap Basic Deployment Script](bootstrap/localDeploy/deploymentScripts/bootstrap-basic-deploy.ps1) to meet your requirements by commenting in the environments you need or adding a new if you've created a different environment naming convention.
+You can then update the [Boot Strap Basic Deployment Script](../bootstrap/localDeploy/2_deploymentScripts/bootstrap-adosc-deploy.ps1) to meet your requirements by commenting in the environments you need or adding a new if you've created a different environment naming convention.

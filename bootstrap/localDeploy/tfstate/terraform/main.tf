@@ -1,7 +1,7 @@
 module "resourcegroup-state" {
   source   = "Azure/avm-res-resources-resourcegroup/azurerm"
   version  = "0.2.1"
-  name     = "${var.rgName_state}-${var.app_short}-${var.environment}-${var.locationShort}-01"
+  name     = local.rgName_state_complete
   location = var.location
   tags     = merge(var.tags, var.tags_state)
   role_assignments = {

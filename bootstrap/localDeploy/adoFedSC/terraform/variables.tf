@@ -1,4 +1,4 @@
-//Global Variables
+﻿//Global Variables
 variable "tags" {
   description = "Tags to apply to resources."
   type        = map(string)
@@ -100,21 +100,10 @@ variable "subscriptionName_Application" {
   type        = string
 }
 
-variable "adoOrgUrl" {
-  description = "The Azure DevOps organization URL."
-  type        = string
-  default     = "https://dev.azure.com/<Fill Me In>/"
-}
-
-variable "adoProjectId" {
-  description = "The Azure DevOps project ID."
-  type        = string
-  default     = "<Fill Me In>"
-}
-
 variable "adoPAT" {
   description = "The Azure DevOps personal access token."
   type        = string
+  default     = null
 }
 
 variable "serviceConnectionName_Build" {
@@ -133,4 +122,16 @@ variable "scDescription" {
   description = "Description for the service connection."
   type        = string
   default     = "Service connection for either build or deploy using OIDC federated credentials."
+}
+
+variable "adoOrgUrl" {
+  description = "The Azure DevOps organization URL."
+  type        = string
+  default     = "https://dev.azure.com/<Fill Me In>/"
+}
+
+variable "adoProjectId" {
+  description = "The Azure DevOps project ID."
+  type        = string
+  default     = "<Fill Me In>"
 }

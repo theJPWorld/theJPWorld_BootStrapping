@@ -1,6 +1,0 @@
-.\bootstrap\templates\scripts\VariablesTF-Populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\variables.tf" -DestinationFile "bootstrap\localDeploy\tfstate\terraform\variables.tf"
-Write-Host "Populated 'variables.tf' for Terraform State."
-.\bootstrap\templates\scripts\VariablesTF-Populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\variables.tf" -DestinationFile "bootstrap\localDeploy\userMI\terraform\variables.tf"
-Write-Host "Populated 'variables.tf' for User Managed Identity."
-.\bootstrap\templates\scripts\VariablesTF-Populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\variables.tf" -DestinationFile "bootstrap\localDeploy\adoFedSC\terraform\variables.tf"
-Write-Host "Populated 'variables.tf' for Azure DevOps Federated Service Connection."

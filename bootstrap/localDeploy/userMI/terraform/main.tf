@@ -1,7 +1,7 @@
 module "resourcegroup-umi" {
   source   = "Azure/avm-res-resources-resourcegroup/azurerm"
   version  = "0.2.1"
-  name     = "${var.rgName_umi}-${var.app_short}-${var.environment}-${var.locationShort}-01"
+  name     = local.rgName_umi_complete
   location = var.location
   tags     = merge(var.tags, var.tags_umi)
 }

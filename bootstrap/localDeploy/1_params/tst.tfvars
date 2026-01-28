@@ -31,3 +31,7 @@ subscriptionId_umi = "<Fill Me In>" //Subscription ID for User Managed Identitie
 tags_umi = {
   Service = "Deployment MI"
 }
+
+//Service Connection Variables
+subscriptionId_Application   = "<Fill Me In>" //Subscription ID for Application/Workload Deployment
+subscriptionName_Application = "<Fill Me In>"       //Subscription Name for Application/Workload Deployment

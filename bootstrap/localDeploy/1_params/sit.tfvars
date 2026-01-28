@@ -1,10 +1,10 @@
 //Global Variables
-environment   = "uat"
+environment   = "sit"
 location      = "<Fill Me In>" //Examle regions: eastus, westus, uksouth, swedencentral
 locationShort = "<Fill Me In>" //Example short regions: eus, wus, uks, sdc
 app_short     = "<Fill Me In>" //Example app short: app1, app2, app3
 tags = {
-  environment = "uat"
+  environment = "sit"
   Creator     = "<Fill Me In>"
   ReviewDate  = "YY/MM"
 }
@@ -18,12 +18,12 @@ tags_state = {
 
 //Customise the containers created for TF State for the Application/Workload being deployed
 containers_state = {
-    Network = {
-      name = "Network"
-    }
-    Infra = {
-      name = "Infra"
-    }
+  Network = {
+    name = "Network"
+  }
+  Infra = {
+    name = "Infra"
+  }
 }
 
 //UMI Variables

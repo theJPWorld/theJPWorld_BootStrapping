@@ -1,4 +1,4 @@
-﻿//Global Variables
+//Global Variables
 variable "tags" {
   description = "Tags to apply to resources."
   type        = map(string)
@@ -58,11 +58,11 @@ variable "saName_state" {
 
 variable "containers_state" {
   description = "Containers to create in the storage account."
-  type        = map(object({
+  type = map(object({
     name          = string
     public_access = optional(string, null)
   }))
-  default     = {}
+  default = {}
 }
 
 //Identity Variables

@@ -8,7 +8,7 @@ param(
 )
 
 $tfDir = "bootstrap/localDeploy/$Workload/terraform"
-$varFile = "../../params/$Environment.tfvars"
+$varFile = "../../1_params/$Environment.tfvars"
 
 Write-Host "Starting TF Plan for $Workload in $Environment environment."
 terraform -chdir="$tfDir" plan -var-file="$varFile"

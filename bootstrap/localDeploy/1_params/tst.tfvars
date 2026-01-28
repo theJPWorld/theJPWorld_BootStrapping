@@ -18,12 +18,12 @@ tags_state = {
 
 //Customise the containers created for TF State for the Application/Workload being deployed
 containers_state = {
-    Network = {
-      name = "Network"
-    }
-    Infra = {
-      name = "Infra"
-    }
+  Network = {
+    name = "Network"
+  }
+  Infra = {
+    name = "Infra"
+  }
 }
 
 //UMI Variables

@@ -1,5 +1,5 @@
 //Global Variables
-environment   = "<Fill Me In>"
+environment   = "dev"
 location      = "<Fill Me In>" //Examle regions: eastus, westus, uksouth, swedencentral
 locationShort = "<Fill Me In>"           //Example short regions: eus, wus, uks, sdc
 app_short     = "<Fill Me In>"          //Example app short: app1, app2, app3

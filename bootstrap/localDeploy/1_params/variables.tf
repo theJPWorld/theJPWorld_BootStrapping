@@ -148,13 +148,13 @@ variable "ghPAT" {
 variable "orgName_gh" {
   description = "The name of the GitHub organization containing the repository."
   type        = string
-  default     = "theJPWorld"
+  default     = null
 }
 
 variable "repositoryName_gh" {
   description = "The name of the GitHub repository containing the environment."
   type        = string
-  default     = "theJPWorld_BootStrapping"
+  default     = null
 }
 
 variable "preventSelfReviewDeploy_gh" {
@@ -163,3 +163,8 @@ variable "preventSelfReviewDeploy_gh" {
   default     = false
 }
 
+variable "deployApprovalRequired" {
+  description = "Whether to prevent reviewers from self-approving in the environment."
+  type        = bool
+  default     = false
+}

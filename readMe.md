@@ -13,3 +13,10 @@ This Bootstrapper will configure User Managed Identities for Build and Deploy Te
 
 ### How To Use this BootStrapper
 [ADO Service Connection Deployment ReadMe](ZDocumention\bootstrap-adosc-reference.md)
+
+## GitHub Service Conenction Bootstrapper  
+
+This Bootstrapper will configure User Managed Identities for Build and Deploy Terraform preivously deployed using Federated OIDC Service Connections in GitHub and configure the GitHub Service Connections.
+
+### How To Use this BootStrapper
+[GitHub Service Connection Deployment ReadMe](ZDocumention\bootstrap-ghsc-reference.md)

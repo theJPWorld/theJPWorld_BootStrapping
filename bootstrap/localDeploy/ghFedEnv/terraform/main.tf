@@ -46,7 +46,7 @@ module "github_environment_deploy" {
   rgName_umiComplete   = local.rgName_umi_complete
   umiResourceId        = data.azurerm_user_assigned_identity.deploy.id
   orgName_gh           = var.orgName_gh
-  gh_approval          = 1
+  gh_approval          = var.deployApprovalRequired
 }
 
 module "github_environment_secret_deploy_azure_client_id" {

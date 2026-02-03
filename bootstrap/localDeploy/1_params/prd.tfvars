@@ -35,3 +35,7 @@ tags_umi = {
 //Service Connection Variables
 subscriptionId_Application   = "<Fill Me In>" //Subscription ID for Application/Workload Deployment
 subscriptionName_Application = "<Fill Me In>" //Subscription Name for Application/Workload Deployment
+
+//GitHub Variables
+preventSelfReviewDeploy_gh = true
+deployApprovalRequired    = true

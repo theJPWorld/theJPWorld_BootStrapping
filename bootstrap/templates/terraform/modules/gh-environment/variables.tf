@@ -26,8 +26,8 @@ variable "preventSelfReview_gh" {
 
 variable "gh_approval" {
   description = "Flag to enable (1) or disable (0) GitHub environment approval via team."
-  type        = number
-  default     = 0
+  type        = bool
+  default     = false
 }
 
 variable "rgName_umiComplete" {

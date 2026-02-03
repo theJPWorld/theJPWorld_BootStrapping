@@ -1,10 +1,10 @@
 //Global Variables
-environment   = "prd"
+environment   = "uat"
 location      = "<Fill Me In>" //Examle regions: eastus, westus, uksouth, swedencentral
 locationShort = "<Fill Me In>" //Example short regions: eus, wus, uks, sdc
 app_short     = "<Fill Me In>" //Example app short: app1, app2, app3
 tags = {
-  environment = "prd"
+  environment = "uat"
   Creator     = "<Fill Me In>"
   ReviewDate  = "YY/MM"
 }
@@ -18,12 +18,12 @@ tags_state = {
 
 //Customise the containers created for TF State for the Application/Workload being deployed
 containers_state = {
-    Network = {
-      name = "Network"
-    }
-    Infra = {
-      name = "Infra"
-    }
+  Network = {
+    name = "Network"
+  }
+  Infra = {
+    name = "Infra"
+  }
 }
 
 //UMI Variables
@@ -31,3 +31,11 @@ subscriptionId_umi = "<Fill Me In>" //Subscription ID for User Managed Identitie
 tags_umi = {
   Service = "Deployment MI"
 }
+
+//Service Connection Variables
+subscriptionId_Application   = "<Fill Me In>" //Subscription ID for Application/Workload Deployment
+subscriptionName_Application = "<Fill Me In>" //Subscription Name for Application/Workload Deployment
+
+//GitHub Variables
+preventSelfReviewDeploy_gh = false
+deployApprovalRequired    = true

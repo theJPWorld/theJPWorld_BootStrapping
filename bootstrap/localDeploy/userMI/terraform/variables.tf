@@ -58,11 +58,11 @@ variable "saName_state" {
 
 variable "containers_state" {
   description = "Containers to create in the storage account."
-  type        = map(object({
+  type = map(object({
     name          = string
     public_access = optional(string, null)
   }))
-  default     = {}
+  default = {}
 }
 
 //Identity Variables
@@ -87,4 +87,84 @@ variable "umiName_tf" {
   description = "Name of the user managed identity."
   type        = string
   default     = "umi-tf"
+}
+
+//SC Credentials Variables
+variable "subscriptionId_Application" {
+  description = "The Azure Subscription ID for deployment."
+  type        = string
+}
+
+variable "subscriptionName_Application" {
+  description = "The Azure Subscription Name for deployment."
+  type        = string
+}
+
+variable "adoPAT" {
+  description = "The Azure DevOps personal access token."
+  type        = string
+  default     = null
+}
+
+variable "serviceConnectionName_Build" {
+  description = "The name of the Azure DevOps service connection."
+  type        = string
+  default     = "sc_build"
+}
+
+variable "serviceConnectionName_Deploy" {
+  description = "The name of the Azure DevOps service connection."
+  type        = string
+  default     = "sc_deploy"
+}
+
+variable "scDescription" {
+  description = "Description for the service connection."
+  type        = string
+  default     = "Service connection for either build or deploy using OIDC federated credentials."
+}
+
+variable "adoOrgUrl" {
+  description = "The Azure DevOps organization URL."
+  type        = string
+  default     = null
+}
+
+variable "adoProjectId" {
+  description = "The Azure DevOps project ID."
+  type        = string
+  default     = null
+}
+
+
+//GitHub Variables
+
+variable "ghPAT" {
+  description = "The GitHub personal access token."
+  type        = string
+  default     = null
+}
+
+variable "orgName_gh" {
+  description = "The name of the GitHub organization containing the repository."
+  type        = string
+  default     = null
+}
+
+variable "repositoryName_gh" {
+  description = "The name of the GitHub repository containing the environment."
+  type        = string
+  default     = null
+}
+
+variable "preventSelfReviewDeploy_gh" {
+  description = "Whether to prevent reviewers from self-approving in the environment."
+  type        = bool
+  default     = false
+}
+
+variable "deployApprovalRequired" {
+  description = "Whether to prevent reviewers from self-approving in the environment."
+  type        = bool
+  default     = false
 }

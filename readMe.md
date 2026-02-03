@@ -1,14 +1,22 @@
 # What will this BootStrapper do?
 
-# Basic Bootstrapper  
+## Basic Bootstrapper  
 
-This will create your core Azure resources for TF State and UMI for Terraform build and deploy actions.  
+This Bootstrapper will deploy User Managed Identities for Build and Deploy Terraform processes and create the TF State Storage account with the required RBAC against the UMIs to be able to Init, Plan and Apply TF Deployments.
+
+### How To Use this BootStrapper
 [Basic Deployment ReadMe](ZDocumention\bootstrap-basic-reference.md)
 
+## ADO Service Conenction Bootstrapper  
 
-## How To Use this BootStrapper
+This Bootstrapper will configure User Managed Identities for Build and Deploy Terraform preivously deployed using Federated OIDC Service Connections in Azure DevOps and configure the Azure DevOps Service Connections.
 
-To follow the default naming structure used above please read [this](ZDocumention/variables-reference.md) to understand the Variables used in this BootStrapper.  You should then be able to update the tfvars (found inside "bootstrap/localDeploy/params" folder) for the environments you require.  You can add additional tfvars by creating a new "env.tfvars" based off of an already existing one.  
-  
+### How To Use this BootStrapper
+[ADO Service Connection Deployment ReadMe](ZDocumention\bootstrap-adosc-reference.md)
 
-You can then update the [Boot Strap Basic Deployment Script](bootstrap/localDeploy/deploymentScripts/bootstrap-basic-deploy.ps1) to meet your requirements by commenting in the environments you need or adding a new if you've created a different environment naming convention.
+## GitHub Service Conenction Bootstrapper  
+
+This Bootstrapper will configure User Managed Identities for Build and Deploy Terraform preivously deployed using Federated OIDC Service Connections in GitHub and configure the GitHub Service Connections.
+
+### How To Use this BootStrapper
+[GitHub Service Connection Deployment ReadMe](ZDocumention\bootstrap-ghsc-reference.md)

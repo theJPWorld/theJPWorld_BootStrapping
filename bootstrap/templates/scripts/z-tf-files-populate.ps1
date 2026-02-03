@@ -1,8 +1,8 @@
 param(
-    [Parameter(Mandatory=$true, HelpMessage="Path to the source variables.tf file")]
+    [Parameter(Mandatory=$true, HelpMessage="Path to the source .tf file")]
     [string]$SourceFile,
 
-    [Parameter(Mandatory=$true, HelpMessage="Path to the destination variables.tf file")]
+    [Parameter(Mandatory=$true, HelpMessage="Path to the destination .tf file")]
     [string]$DestinationFile,
 
     [switch]$Append = $false

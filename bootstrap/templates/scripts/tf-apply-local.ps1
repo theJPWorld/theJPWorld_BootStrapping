@@ -7,7 +7,7 @@ param(
 	[string]$Environment,
 
 	[Parameter(Mandatory=$false, HelpMessage="Azure DevOps Personal Access Token")]
-	[string]$AdoPAT
+	[string]$PAT
 )
 
 $tfDir = "bootstrap/localDeploy/$Workload/terraform"
@@ -15,7 +15,9 @@ $varFile = "../../1_params/$Environment.tfvars"
 
 Write-Host "Starting TF apply for $Workload in $Environment environment."
 if ($Workload -eq "adoFedSC") {
-	terraform -chdir="$tfDir" apply -var-file="$varFile" -var "adoPAT=$AdoPAT" -auto-approve
+	terraform -chdir="$tfDir" apply -var-file="$varFile" -var "adoPAT=$PAT" -auto-approve
+} elseif ($Workload -eq "ghFedEnv") {
+	terraform -chdir="$tfDir" apply -var-file="$varFile" -var "ghPAT=$PAT" -auto-approve
 } else {
 	terraform -chdir="$tfDir" apply -var-file="$varFile" -auto-approve
 }
@@ -24,5 +26,4 @@ Start-Sleep -Seconds 10
 Write-Host "Cleaning up local Terraform files..."
 Remove-Item -Recurse -Force "$tfDir/.terraform"
 Remove-Item -Force "$tfDir/.terraform.lock.hcl", "$tfDir/terraform.tfstate"
-
 Write-Host "Cleanup completed."

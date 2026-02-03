@@ -5,6 +5,8 @@ Write-Host "Populated 'variables.tf' for Terraform State."
 Write-Host "Populated 'variables.tf' for User Managed Identity."
 .\bootstrap\templates\scripts\z-tf-files-populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\variables.tf" -DestinationFile "bootstrap\localDeploy\adoFedSC\terraform\variables.tf"
 Write-Host "Populated 'variables.tf' for Azure DevOps Federated Service Connection."
+.\bootstrap\templates\scripts\z-tf-files-populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\variables.tf" -DestinationFile "bootstrap\localDeploy\ghFedEnv\terraform\variables.tf"
+Write-Host "Populated 'variables.tf' for GitHub Federated Environment."
 Write-Host "variables.tf files complete"
 Start-Sleep -Seconds 3
 
@@ -15,5 +17,7 @@ Write-Host "Populated 'locals.tf' for Terraform State."
 Write-Host "Populated 'locals.tf' for User Managed Identity."
 .\bootstrap\templates\scripts\z-tf-files-populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\locals.tf" -DestinationFile "bootstrap\localDeploy\adoFedSC\terraform\locals.tf"
 Write-Host "Populated 'locals.tf' for Azure DevOps Federated Service Connection."
+.\bootstrap\templates\scripts\z-tf-files-populate.ps1 -SourceFile "bootstrap\localDeploy\1_params\locals.tf" -DestinationFile "bootstrap\localDeploy\ghFedEnv\terraform\locals.tf"
+Write-Host "Populated 'locals.tf' for GitHub Federated Environment."
 Write-Host "locals.tf files complete"
 Start-Sleep -Seconds 3

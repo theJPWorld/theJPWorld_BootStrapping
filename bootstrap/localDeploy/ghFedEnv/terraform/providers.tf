@@ -5,7 +5,7 @@ terraform {
       version = "=4.58.0"
     }
     github = {
-      source = "integrations/github"
+      source  = "integrations/github"
       version = "6.10.2"
     }
   }
@@ -18,8 +18,8 @@ provider "azurerm" {
 }
 
 provider "github" {
-  #read this link for more info
-  #https://registry.terraform.io/providers/integrations/github/latest/docs
+  owner = var.orgName_gh
+  token = var.ghPAT
 }
 
 provider "random" {}

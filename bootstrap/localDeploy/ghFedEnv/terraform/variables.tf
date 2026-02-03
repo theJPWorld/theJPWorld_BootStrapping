@@ -127,11 +127,40 @@ variable "scDescription" {
 variable "adoOrgUrl" {
   description = "The Azure DevOps organization URL."
   type        = string
-  default     = "https://dev.azure.com/<Fill Me In>/"
+  default     = null
 }
 
 variable "adoProjectId" {
   description = "The Azure DevOps project ID."
   type        = string
-  default     = "<Fill Me In>"
+  default     = null
 }
+
+
+//GitHub Variables
+
+variable "ghPAT" {
+  description = "The GitHub personal access token."
+  type        = string
+  default     = null
+}
+
+variable "orgName_gh" {
+  description = "The name of the GitHub organization containing the repository."
+  type        = string
+  default     = "theJPWorld"
+}
+
+variable "repositoryName_gh" {
+  description = "The name of the GitHub repository containing the environment."
+  type        = string
+  default     = "theJPWorld_BootStrapping"
+}
+
+variable "preventSelfReviewDeploy_gh" {
+  description = "Whether to prevent reviewers from self-approving in the environment."
+  type        = bool
+  default     = false
+}
+
+

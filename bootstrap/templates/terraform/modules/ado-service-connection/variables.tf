@@ -43,3 +43,15 @@ variable "umiResourceId" {
   description = "The resource ID of the UMI."
   type        = string
 }
+
+variable "deployApprovalRequired" {
+  description = "Whether deployment approval is required for the service connection."
+  type        = bool
+  default     = false
+}
+
+variable "preventSelfReviewDeploy_ado" {
+  description = "Whether to prevent self-review deployment in Azure DevOps."
+  type        = bool
+  default     = false
+}

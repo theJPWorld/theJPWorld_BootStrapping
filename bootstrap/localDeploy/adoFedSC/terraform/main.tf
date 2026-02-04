@@ -25,4 +25,6 @@ module "deploy_federated_service_connection" {
   subscriptionName_Application = var.subscriptionName_Application
   rgName_umiComplete           = local.rgName_umi_complete
   umiResourceId                = data.azurerm_user_assigned_identity.deploy.id
+  deployApprovalRequired       = var.deployApprovalRequired
+  preventSelfReviewDeploy_ado  = var.preventSelfReviewDeploy_ado
 }

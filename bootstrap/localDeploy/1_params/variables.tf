@@ -136,6 +136,12 @@ variable "adoProjectId" {
   default     = null
 }
 
+variable "preventSelfReviewDeploy_ado" {
+  description = "Whether to prevent reviewers from self-approving in the environment."
+  type        = bool
+  default     = false
+}
+
 
 //GitHub Variables
 

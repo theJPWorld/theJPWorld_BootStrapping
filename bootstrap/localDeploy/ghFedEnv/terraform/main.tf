@@ -10,30 +10,30 @@ module "github_environment_build" {
 }
 
 module "github_environment_secret_build_azure_client_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-build"
-  secretName    = "AZURE_CLIENT_ID"
-  secretValue   = data.azurerm_user_assigned_identity.build.client_id
-  depends_on = [ module.github_environment_build ]
+  secretName         = "AZURE_CLIENT_ID"
+  secretValue        = data.azurerm_user_assigned_identity.build.client_id
+  depends_on         = [module.github_environment_build]
 }
 
 module "github_environment_secret_build_azure_tenant_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-build"
-  secretName    = "AZURE_TENANT_ID"
-  secretValue   = data.azurerm_user_assigned_identity.build.tenant_id
-  depends_on = [ module.github_environment_build ]
+  secretName         = "AZURE_TENANT_ID"
+  secretValue        = data.azurerm_user_assigned_identity.build.tenant_id
+  depends_on         = [module.github_environment_build]
 }
 
 module "github_environment_secret_build_azure_subscription_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-build"
-  secretName    = "AZURE_SUBSCRIPTION_ID"
-  secretValue   = var.subscriptionId_Application
-  depends_on = [ module.github_environment_build ]
+  secretName         = "AZURE_SUBSCRIPTION_ID"
+  secretValue        = var.subscriptionId_Application
+  depends_on         = [module.github_environment_build]
 }
 
 
@@ -50,28 +50,28 @@ module "github_environment_deploy" {
 }
 
 module "github_environment_secret_deploy_azure_client_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-deploy"
-  secretName    = "AZURE_CLIENT_ID"
-  secretValue   = data.azurerm_user_assigned_identity.deploy.client_id
-  depends_on = [ module.github_environment_deploy ]
+  secretName         = "AZURE_CLIENT_ID"
+  secretValue        = data.azurerm_user_assigned_identity.deploy.client_id
+  depends_on         = [module.github_environment_deploy]
 }
 
 module "github_environment_secret_deploy_azure_tenant_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-deploy"
-  secretName    = "AZURE_TENANT_ID"
-  secretValue   = data.azurerm_user_assigned_identity.deploy.tenant_id
-  depends_on = [ module.github_environment_deploy ]
+  secretName         = "AZURE_TENANT_ID"
+  secretValue        = data.azurerm_user_assigned_identity.deploy.tenant_id
+  depends_on         = [module.github_environment_deploy]
 }
 
 module "github_environment_secret_deploy_azure_subscription_id" {
-  source        = "../../../templates/terraform/modules/gh-environment-secret"
-  repositoryName_gh = var.repositoryName_gh
+  source             = "../../../templates/terraform/modules/gh-environment-secret"
+  repositoryName_gh  = var.repositoryName_gh
   environmentName_gh = "${local.environmentName_gh}-deploy"
-  secretName    = "AZURE_SUBSCRIPTION_ID"
-  secretValue   = var.subscriptionId_Application
-  depends_on = [ module.github_environment_deploy ]
+  secretName         = "AZURE_SUBSCRIPTION_ID"
+  secretValue        = var.subscriptionId_Application
+  depends_on         = [module.github_environment_deploy]
 }

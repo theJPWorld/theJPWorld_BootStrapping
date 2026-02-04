@@ -1,4 +1,4 @@
-## [🏠 HOME](../ReadMe.md)
+## [🏠 HOME](../readMe.md)
 
 # GitHub OIDC Service Connection Bootstrap
 
@@ -37,7 +37,7 @@ Each module sources [templates/terraform/modules/gh-environment/main.tf](../temp
 
 ### Inputs and Variables
 
-See the [Variables Reference](ZDocumention/variables-reference.md) guide for details on the the variables used.
+See the [Variables Reference](./variables-reference.md) guide for details on the the variables used.
 
 Variables for the GitHub service connection bootstrap are defined in [bootstrap/localDeploy/1_params/variables.tf](../bootstrap/localDeploy/1_params/variables.tf).  
 Environment-scoped values come from [bootstrap/localDeploy/1_params/](../bootstrap/localDeploy/1_params) `*.tfvars`. Ensure these are up-to-date for each environment.

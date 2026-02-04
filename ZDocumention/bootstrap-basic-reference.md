@@ -1,4 +1,4 @@
-## [🏠 HOME](../ReadMe.md)
+## [🏠 HOME](../readMe.md)
 
 # Basic Bootstrapper  
 
@@ -44,9 +44,9 @@ Each module uses Azure Verified Modules as it's source.
 
 ### Inputs and Variables
 
-See the [Variables Reference](ZDocumention/variables-reference.md) guide for details on the the variables used.
+See the [Variables Reference](./variables-reference.md) guide for details on the the variables used.
 
-Variables for the basic bootstrap are defined in [bootstrap/localDeploy/1_params/variables.tf](../bootstrap/localDeploy/1_params/variables.tf). See [link.](ZDocumention/variables-reference.md) for more information.  
+Variables for the basic bootstrap are defined in [bootstrap/localDeploy/1_params/variables.tf](../bootstrap/localDeploy/1_params/variables.tf). See [link.](./variables-reference.md) for more information.  
 Environment-scoped values come from [bootstrap/localDeploy/1_params/](../bootstrap/localDeploy/1_params) `*.tfvars`. Ensure these are up-to-date for each environment.
 
 ### Script Workflow

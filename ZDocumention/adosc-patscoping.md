@@ -7,7 +7,7 @@
 
 ## 2: Once there click new token on the top right
 ## 3: Select `Show all scopes` at the bottom
-![PAT Scoping Screenshot](/images/Show_All_Scope.png)  
+![PAT Scoping Screenshot](images/Show_All_Scope.png)  
 Make sure the following scopes are selected:  
 - Build - Read & Execute
 - Graph - Read & Manage
@@ -17,10 +17,10 @@ Make sure the following scopes are selected:
 - Task Groups - Read, create, & manage  
 ## 4: Change expiration date the following day
 This will enable the PAT Token to be as short as it posibly can be.   
-<img src="/images/PAT_Config.png" width="30%" height="30%">  
+<img src="images/PAT_Config.png" width="30%" height="30%">  
 
 ## 5: Copy PAT Token for use at Runtime
 
 # Azure DevOps Revoking PAT Token
 ## 6: Once you've run the deployment you can revoke the token
-![PAT Revoke Screenshot](/images/PAT_Revoke.png)  
+![PAT Revoke Screenshot](images/PAT_Revoke.png)  

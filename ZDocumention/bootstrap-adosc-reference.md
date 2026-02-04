@@ -1,4 +1,4 @@
-## [🏠 HOME](../ReadMe.md)
+## [🏠 HOME](../readMe.md)
 
 # Azure DevOps Federated Service Connection Bootstrap
 

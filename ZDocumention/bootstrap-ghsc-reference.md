@@ -1,4 +1,4 @@
-## [🏠 HOME](../ReadMe.md)
+## [🏠 HOME](../readMe.md)
 
 # GitHub OIDC Service Connection Bootstrap
 

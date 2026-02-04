@@ -71,8 +71,8 @@ This document explains the variables defined in `variables.tf` for the bootstrap
 | `ghPAT`                       | string | GitHub Personal Access Token (used to manage envs/secrets).                 | Runtime (passed via scripts), default null         |
 | `orgName_gh`                  | string | GitHub organization (or user) name containing the repository.               | bootstrap/localDeploy/1_params/terraform.tfvars    |
 | `repositoryName_gh`           | string | GitHub repository name containing the environment.                          | bootstrap/localDeploy/1_params/terraform.tfvars    |
-| `preventSelfReviewDeploy_gh`  | bool   | Prevent reviewers from self-approving in the deploy environment.            | bootstrap/localDeploy/1_params/"env".tfvars       |
-| `deployApprovalRequired`      | bool   | Whether deploy environment requires approvals (module-level usage).          | bootstrap/localDeploy/1_params/"env".tfvars       |
+| `preventSelfReviewDeploy_gh`  | bool   | GitHub Org Required to set up a team, Repo will need to be Public OR A Github Enterprise account will be required.  Prevent reviewers from self-approving in the deploy environment.            | bootstrap/localDeploy/1_params/"env".tfvars       |
+| `deployApprovalRequired`      | bool   | GitHub Org Required to set up a team, Repo will need to be Public OR A Github Enterprise account will be required.  Whether deploy environment requires approvals (module-level usage).          | bootstrap/localDeploy/1_params/"env".tfvars       |
 
 ---
 

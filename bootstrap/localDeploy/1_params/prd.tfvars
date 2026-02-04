@@ -37,8 +37,8 @@ subscriptionId_Application   = "<Fill Me In>" //Subscription ID for Application/
 subscriptionName_Application = "<Fill Me In>" //Subscription Name for Application/Workload Deployment
 
 //GitHub Variables
-preventSelfReviewDeploy_gh = true
-deployApprovalRequired     = true
+preventSelfReviewDeploy_gh = true //GitHub Requirements in the Variables Documentation Markdown
+deployApprovalRequired    = true //GitHub Requirements in the Variables Documentation Markdown
 
 //ADO Variables
 preventSelfReviewDeploy_ado = true

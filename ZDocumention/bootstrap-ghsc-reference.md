@@ -30,7 +30,7 @@ Each module sources [templates/terraform/modules/gh-environment/main.tf](../temp
 - **Terraform**: Installed and available on `PATH`.
 - **Azure Subscription**: You have the correct subscription and permissions to deploy resources.
 - **UMIs exist**: The UMIs referenced by `data.tf` must already exist **(usually provisioned by the basic bootstrap)**. Names are derived from locals.tf.
-- **GitHub PAT**: A Personal Access Token with permissions to manage environments and secrets in the target repository. Do not store the PAT in version control; provide it at runtime.
+- **GitHub PAT**: A Personal Access Token with permissions to manage environments and secrets in the target repository. Do not store the PAT in version control; provide it at runtime. [See this link for a guide on this](../ZDocumention/ghsc-patscoping.md)
 - **GitHub Repository**: The repository and (optionally) organization must exist.
 
 

@@ -19,3 +19,26 @@ resource "azurerm_federated_identity_credential" "this" {
   issuer              = azuredevops_serviceendpoint_azurerm.this.workload_identity_federation_issuer
   subject             = azuredevops_serviceendpoint_azurerm.this.workload_identity_federation_subject
 }
+
+data "azuredevops_group" "deploy-approvers" {
+  count      = var.deployApprovalRequired == true ? 1 : 0
+  project_id = var.adoProjectId
+  name       = "Approvers-${var.serviceConnectionName}"
+}
+
+resource "azuredevops_check_approval" "this" {
+  count                = var.deployApprovalRequired == true ? 1 : 0
+  project_id           = var.adoProjectId
+  target_resource_id   = azuredevops_serviceendpoint_azurerm.this.id
+  target_resource_type = "endpoint"
+
+  requester_can_approve = !var.preventSelfReviewDeploy_ado
+  approvers = [
+    one(azuredevops_group.deploy-approvers[0].descriptor)
+  ]
+  timeout = 43200
+  depends_on = [
+    azuredevops_serviceendpoint_azurerm.this,
+    data.azuredevops_group.deploy-approvers
+  ]
+}

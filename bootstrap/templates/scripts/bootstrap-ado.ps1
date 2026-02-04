@@ -8,11 +8,9 @@ param(
 	[Parameter(Mandatory=$false, HelpMessage="Azure DevOps Personal Access Token")]
 	[string]$PAT
 )
-
 # Interactive login to Azure with specified tenant ID
 az login --tenant "$TenantID"
-
-Write-Host "Starting Bootstrap for User Managed Identities for Deployment for $Environment environment."
+Write-Host "Starting Bootstrap for ADO SC for Deployment for $Environment environment."
 # Run tf-init for your User Managed Identities for Deployment
 ./bootstrap/templates/scripts/tf-init-local.ps1 -Workload adoFedSC -PAT $PAT
 

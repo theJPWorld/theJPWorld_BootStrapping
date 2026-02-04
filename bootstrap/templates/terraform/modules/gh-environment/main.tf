@@ -7,7 +7,7 @@ resource "github_team" "approval_team" {
 }
 
 resource "github_team_repository" "approval_team_repo" {
-  count       = var.gh_approval == true ? 1 : 0
+  count      = var.gh_approval == true ? 1 : 0
   team_id    = github_team.approval_team[0].id
   repository = var.repositoryName_gh
 }

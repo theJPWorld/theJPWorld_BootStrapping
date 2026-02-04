@@ -38,4 +38,7 @@ subscriptionName_Application = "<Fill Me In>" //Subscription Name for Applicatio
 
 //GitHub Variables
 preventSelfReviewDeploy_gh = false
-deployApprovalRequired    = true
+deployApprovalRequired     = true
+
+//ADO Variables
+preventSelfReviewDeploy_ado = false

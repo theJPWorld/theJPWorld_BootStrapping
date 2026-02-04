@@ -22,3 +22,15 @@ This Bootstrapper will configure User Managed Identities for Build and Deploy Te
 
 ### How To Use this BootStrapper
 [GitHub Service Connection Deployment ReadMe](ZDocumention/bootstrap-ghsc-reference.md)
+
+# Approval Groups
+
+## ADO Group  
+
+Head to the below link to see the approval groups in Azure DevOps and add members to it.  
+`https://dev.azure.com/<Your Org>/<ADO Project Name>/_settings/permissions`
+
+## GitHub Team  
+
+Head to the below link to see the approval teams in GitHub and add members to it.  
+`https://github.com/orgs/<Your Org>/teams`

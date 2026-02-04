@@ -3,7 +3,7 @@
 # Azure DevOps Least Priveldge PAT Scoping
 
 ## 1: Head Over to:  
-https://dev.azure.com/<Your Org Name>/_usersSettings/tokens  
+`https://dev.azure.com/<Your Org Name>/_usersSettings/tokens`
 
 ## 2: Once there click new token on the top right
 ## 3: Select `Show all scopes` at the bottom

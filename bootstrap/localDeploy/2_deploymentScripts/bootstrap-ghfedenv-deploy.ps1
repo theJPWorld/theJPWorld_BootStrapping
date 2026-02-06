@@ -1,5 +1,5 @@
 
-$TenantID = "6771b25a-f4d8-4f9f-9fcc-e7468a5cdc46"
+$TenantID = "<Fill Me In>"
 
 $PAT = Read-Host -AsSecureString "Enter GitHub Personal Access Token (ghPAT)"
 $PATPlain = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($PAT))
